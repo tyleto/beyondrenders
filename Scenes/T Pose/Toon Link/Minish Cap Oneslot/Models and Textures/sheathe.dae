@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlCrate</authoring_tool>
+		</contributor>
+		<created>2021-01-29T02:14:36Z</created>
+		<modified>2021-01-29T02:14:36Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="FitToonLink_sheath-image" name="FitToonLink_sheath">
+			<init_from>
+				<ref>FitToonLink_sheath.png</ref>
+			</init_from>
+		</image>
+		<image id="metal00-image" name="metal00">
+			<init_from>
+				<ref>metal00.png</ref>
+			</init_from>
+		</image>
+	</library_images>
+	<library_materials>
+		<material id="Sheath">
+			<instance_effect url="#Sheath-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="Sheath-fx" name="Sheath">
+			<profile_COMMON>
+				<newparam sid="FitToonLink_sheath-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>FitToonLink_sheath-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="FitToonLink_sheath-sampler">
+					<sampler2D>
+						<source>FitToonLink_sheath-surface</source>
+						<instance_image url="#FitToonLink_sheath-image" />
+						<wrap_s>MIRROR</wrap_s>
+						<wrap_t>MIRROR</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="FitToonLink_sheath-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="Arms_Tate_ExtMtl-fx" name="Arms_Tate_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="Body_ExtMtl-fx" name="Body_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="Buckle_ExtMtl-fx" name="Buckle_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="EyeL_ExtMtl-fx" name="EyeL_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="EyeR_ExtMtl-fx" name="EyeR_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="EyeYellowL_ExtMtl-fx" name="EyeYellowL_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="EyeYellowR_ExtMtl-fx" name="EyeYellowR_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="Face_ExtMtl-fx" name="Face_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="Mouth_ExtMtl-fx" name="Mouth_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="mayuL_ExtMtl-fx" name="mayuL_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="mayuR_ExtMtl-fx" name="mayuR_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>NEAREST</minfilter>
+						<magfilter>NEAREST</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="Sheath_ExtMtl-fx" name="Sheath_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="FourSwordGem_ExtMtl-fx" name="FourSwordGem_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="FourSwordBlade_ExtMtl-fx" name="FourSwordBlade_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="FourSwordHilt_ExtMtl-fx" name="FourSwordHilt_ExtMtl">
+			<profile_COMMON>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<newparam sid="metal00-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>metal00-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="metal00-sampler">
+					<sampler2D>
+						<source>metal00-surface</source>
+						<instance_image url="#metal00-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="metal00-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon33" name="polygon33">
+			<mesh>
+				<source id="polygon33_Positions">
+					<float_array id="polygon33_PosArr" count="42">0.7927817 8.540285 -1.518809 -1.688287 3.855713 -1.559078 -1.005007 3.487475 -1.24407 -2.065681 3.152555 -1.465967 -1.644695 2.873874 -1.218182 -2.436869 2.448958 -1.182411 -2.04612 3.152371 -0.922263 -2.510967 3.350228 -1.168736 -2.342803 4.223202 -1.167712 1.436089 8.193445 -1.233825 -1.660337 3.855453 -0.8490839 0.8177032 8.539564 -0.8791703 0.1743983 8.886366 -1.161829 0.8052387 8.539925 -1.19901</float_array>
+					<technique_common>
+						<accessor source="#polygon33_PosArr" count="14" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon33_Normals">
+					<float_array id="polygon33_NormArr" count="48">0.01328675 0.01542287 -2.539919 -0.1141223 -0.1884248 -2.530429 1.910432 -1.673874 -0.00165354 -0.3847036 -0.6252233 -2.431605 1.202178 -2.237492 2.54E-06 -1.331081 -2.163289 -2.54E-06 -0.3847037 -0.625226 2.431603 -2.53918 0.06457824 2.54E-06 -2.355309 0.9508528 0.00165354 2.183836 -1.297093 -0.0032639 -0.1167588 -0.1868068 2.530429 0.007777491 0.01880616 2.539919 -2.142212 1.364741 0.00326136 1.331081 2.163289 5.08E-06 1.331081 2.163292 5.08E-06 1.331081 2.163289 2.54E-06</float_array>
+					<technique_common>
+						<accessor source="#polygon33_NormArr" count="16" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon33_UVs0">
+					<float_array id="polygon33_UVArr0" count="20">1 0.8125 1 0.21875 0.046875 0.21875 1 0.128906 0.324219 0.125 1 0.03125 0.046875 0.8125 0.035156 1 0.988281 0.863281 0.988281 1</float_array>
+					<technique_common>
+						<accessor source="#polygon33_UVArr0" count="10" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon33_Vertices">
+					<input semantic="POSITION" source="#polygon33_Positions" />
+				</vertices>
+				<triangles material="Sheath" count="24">
+					<input semantic="VERTEX" source="#polygon33_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon33_Normals" offset="1" />
+					<input semantic="TEXCOORD" source="#polygon33_UVs0" set="0" offset="2" />
+					<p>2 2 2 1 1 1 0 0 0 3 3 3 1 1 1 2 2 2 4 4 4 3 3 3 2 2 2 5 5 5 3 3 3 4 4 4 6 6 3 5 5 5 4 4 4 7 7 4 5 5 5 6 6 3 8 8 2 7 7 4 6 6 3 3 3 3 7 7 4 8 8 2 1 1 1 3 3 3 8 8 2 9 9 6 2 2 2 0 0 0 10 10 1 2 2 2 9 9 6 11 11 0 10 10 1 9 9 6 8 8 2 10 10 1 11 11 0 12 12 6 8 8 2 11 11 0 1 1 1 8 8 2 12 12 6 0 0 0 1 1 1 12 12 6 10 10 1 6 6 3 2 2 2 8 8 2 6 6 3 10 10 1 13 13 9 0 13 8 12 13 7 9 14 7 0 13 8 13 13 9 11 15 8 9 14 7 13 13 9 2 2 2 6 6 3 4 4 4 13 13 9 12 13 7 11 15 8 3 3 3 5 5 5 7 7 4</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon33_Controller">
+			<skin source="#polygon33">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon33_Joints">
+					<Name_array id="polygon33_JointArr" count="83">TopN EyeYellowM TransN XRotN YRotN HipN LLegJ LKneeJ LFootJ LToeN RLegJ RKneeJ RFootJ RToeN WaistN BustN LShoulderN LShoulderJ LArmJ LASabN LHandN KenC KenJ KenE KenM KenModelN KenEdgeM L1stNa L1stNb L2ndNa L2ndNb L3rdNa L3rdNb L4thNa L4thNb LHandNb LHaveN LThumbNa LThumbNb LSSabN NeckN HeadN HatAN HatBN HatCN HatDN LHairN LHairNb LHairNend LSideN LSideNb RHairN RHairNb RHairNend RSideN RSideNb RShoulderN RShoulderJ RArmJ RASabN RHandN R1stNa R1stNb R2ndNa R2ndNb R3rdNa R3rdNb R4thNa R4thNb RHandNb RHaveN RThumbNa RThumbNb TateN TateM RSSabN SayaN SayaM SayaTateN TateMb SayaTukaN KenMb ThrowN</Name_array>
+					<technique_common>
+						<accessor source="#polygon33_JointArr" count="83">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon33_Matrices">
+					<float_array id="polygon33_MatArr" count="1328">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 -5.265 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 -5.265 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 -5.265 0 0 1 0 0 0 0 1 1 0 0 -1.053 0 1 0 -4.55 0 0 1 0 0 0 0 1 1 0 0 -1.053 0 1 0 -2.047499 0 0 1 -0.029263 0 0 0 1 1 0 0 -1.053 0 1 0 -0.3802487 0 0 1 0.058499 0 0 0 1 1 0 0 -1.053 0 1 0 -0.2047447 0 0 1 -0.584999 0 0 0 1 1 0 0 1.053 0 -1 -2.433593E-08 4.55 0 2.433593E-08 -1 -1.107285E-07 0 0 0 1 1 0 0 1.053 0 -1 -2.433593E-08 2.047499 0 2.433593E-08 -1 0.02925589 0 0 0 1 1 0 0 1.053 0 -1 -2.433593E-08 0.3802487 0 2.433593E-08 -1 -0.05850011 0 0 0 1 1 0 0 1.052999 0 -1 -2.433593E-08 0.2047467 0 2.433593E-08 -1 0.5849999 0 0 0 1 1 0 0 0 0 1 0 -5.970285 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 -7.240857 0 0 1 0 0 0 0 1 1 0 0 -0.3477 0 1 0 -8.934351 0 0 1 0 0 0 0 1 1 0 0 -1.736046 0 1 0 -8.939358 0 0 1 0.083107 0 0 0 1 1 0 0 -3.726616 0 1 0 -8.938995 0 0 1 0.167811 0 0 0 1 1 0 0 -3.726616 0 1 0 -8.938995 0 0 1 0.167811 0 0 0 1 1 0 0 -5.870473 0 1 0 -8.939099 0 0 1 0.143796 0 0 0 1 0.01125314 -0.01253735 0.9998581 0.190561 -0.9998494 0.01306985 0.01141692 6.50917 -0.01321113 -0.999836 -0.01238838 8.964254 0 0 0 1 0.0112513 -0.01253638 0.9998581 0.1905646 -0.01321127 -0.999836 -0.01238744 8.96426 0.9998494 -0.01307002 -0.01141507 -6.509168 0 0 0 1 0.0112513 -0.01253638 0.9998581 -8.066523 -0.01321127 -0.999836 -0.01238744 8.96426 0.9998494 -0.01307002 -0.01141507 -6.509168 0 0 0 1 0.01116931 -0.01253531 0.9998591 -0.08617387 -0.01321127 -0.999836 -0.01238744 8.956096 0.9998503 -0.01307104 -0.01133309 -6.494118 0 0 0 1 0.01112291 -0.02139624 0.9997092 -1.091666 -0.01327747 -0.999686 -0.02124802 8.975133 0.9998499 -0.01303727 -0.0114035 -6.51824 0 0 0 1 0.01112291 -0.02139624 0.9997092 0.2700497 -0.01327747 -0.999686 -0.02124802 8.949509 0.9998499 -0.01303727 -0.0114035 -6.47355 0 0 0 1 1 0 0 -6.733354 0 1 0 -9.1259 0 0 1 -0.183924 0 0 0 1 1 0 0 -7.025663 0 1 0 -9.1259 0 0 1 -0.183924 0 0 0 1 1 0 0 -6.772544 0 1 0 -9.14956 0 0 1 0.07871001 0 0 0 1 1 0 0 -7.086237 0 1 0 -9.14956 0 0 1 0.07871001 0 0 0 1 1 0 0 -6.77156 0 1 0 -9.193007 0 0 1 0.351503 0 0 0 1 1 0 0 -7.070256 0 1 0 -9.193007 0 0 1 0.351503 0 0 0 1 1 0 0 -6.73429 0 1 0 -9.138514 0 0 1 0.576092 0 0 0 1 1 0 0 -6.948113 0 1 0 -9.138514 0 0 1 0.576092 0 0 0 1 1 0 0 -5.870473 0 1 0 -8.939099 0 0 1 0.143796 0 0 0 1 1.216796E-08 1 0 -8.712311 -1.216796E-08 1.480594E-16 1 0.1232681 1 -1.216796E-08 1.216796E-08 -6.74425 0 0 0 1 1 0 0 -6.117679 0 1 0 -8.75614 0 0 1 -0.199057 0 0 0 1 1 0 0 -6.575794 0 1 0 -8.75614 0 0 1 -0.199057 0 0 0 1 1 0 0 -1.736046 0 1 0 -8.939358 0 0 1 0.083107 0 0 0 1 1 0 0 0 0 1 0 -9.242524 0 0 1 0.084403 0 0 0 1 1 0 0 0 0 1 0 -9.710645 0 0 1 0.057156 0 0 0 1 4.3708E-07 -0.004284626 -0.9999908 -1.624281 0.0001020225 -0.9999908 0.004284626 12.48956 -1 -0.0001020234 5.213517E-11 0.001273506 0 0 0 1 4.364318E-07 -0.004278273 -0.9999908 -3.49636 0.0001020225 -0.9999908 0.004278273 12.48955 -1 -0.0001020234 5.213517E-11 0.001273506 0 0 0 1 4.364318E-07 -0.004278273 -0.9999908 -5.69011 -5.559617E-06 -0.9999908 0.004278273 12.48955 -1 5.557698E-06 -4.602134E-07 -7.014612E-05 0 0 0 1 4.364318E-07 -0.004278273 -0.9999908 -7.766859 -5.559617E-06 -0.9999908 0.004278273 12.48955 -1 5.557698E-06 -4.602134E-07 -7.014612E-05 0 0 0 1 -0.6734866 -0.7105407 0.2072064 8.892766 0.1426466 0.1502879 0.9782972 -4.405326 -0.7253053 0.6884274 1.190389E-08 -8.260881 0 0 0 1 -0.9013635 -0.3142127 0.2980171 3.075084 0.2814088 0.0980983 0.9545605 -3.722629 -0.32917 0.9442707 -6.630345E-09 -11.37981 0 0 0 1 -0.9013635 -0.3142127 0.2980171 1.984702 0.2814088 0.0980983 0.9545605 -3.722629 -0.32917 0.9442707 -6.630345E-09 -11.37981 0 0 0 1 1.216785E-08 -0.9999908 0.00427826 11.26105 1.211591E-08 0.00427826 0.9999908 -0.5401387 -1 -1.211591E-08 1.216785E-08 2.2815 0 0 0 1 1.216785E-08 -0.9999908 0.00427826 9.623049 1.211591E-08 0.00427826 0.9999908 -0.5401387 -1 -1.211591E-08 1.216785E-08 2.2815 0 0 0 1 -0.8795534 -0.4627336 -0.1107404 5.37365 -0.09800485 -0.05156043 0.9938494 -0.8096107 -0.4655973 0.8849967 1.209312E-08 -11.93764 0 0 0 1 -0.9214826 -0.2589829 -0.2894781 1.956341 -0.2786808 -0.07832331 0.9571846 -0.7530317 -0.2705673 0.962701 1.763648E-08 -12.55987 0 0 0 1 -0.9214826 -0.2589829 -0.2894781 0.4579154 -0.2786808 -0.07832331 0.9571846 -0.7530317 -0.2705673 0.962701 1.763648E-08 -12.55987 0 0 0 1 1.216785E-08 -0.9999908 0.00427826 11.26105 1.211591E-08 0.00427826 0.9999908 -0.5401386 -1 -1.211591E-08 1.216785E-08 -2.2815 0 0 0 1 -4.019203E-08 -0.9999908 0.00427826 9.623049 1.211591E-08 0.00427826 0.9999908 -0.5401386 -1 4.024349E-08 1.194384E-08 -2.281501 0 0 0 1 1 0 0 0.3477 0 -1 -2.433593E-08 8.93435 0 2.433593E-08 -1 -2.174257E-07 0 0 0 1 1 0 0 1.73605 0 -1 -2.433593E-08 8.93936 0 2.433593E-08 -1 -0.08310722 0 0 0 1 1 0 0 3.72662 0 -1 -2.433593E-08 8.939 0 2.433593E-08 -1 -0.1678112 0 0 0 1 1 0 0 3.72662 0 -1 -2.433593E-08 8.939 0 2.433593E-08 -1 -0.1678112 0 0 0 1 1 0 0 5.87047 0 -1 -2.433593E-08 8.9391 0 2.433593E-08 -1 -0.1437962 0 0 0 1 1 0 0 6.73335 0 -1 -2.433593E-08 9.1259 0 2.433593E-08 -1 0.1839248 0 0 0 1 1 0 0 7.02566 0 -1 -2.433593E-08 9.1259 0 2.433593E-08 -1 0.1839248 0 0 0 1 1 0 0 6.77254 0 -1 -2.433593E-08 9.14956 0 2.433593E-08 -1 -0.07871022 0 0 0 1 1 0 0 7.08624 0 -1 -2.433593E-08 9.14956 0 2.433593E-08 -1 -0.07871022 0 0 0 1 1 0 0 6.77156 0 -1 -2.433593E-08 9.19301 0 2.433593E-08 -1 -0.3515022 0 0 0 1 1 0 0 7.07026 0 -1 -2.433593E-08 9.19301 0 2.433593E-08 -1 -0.3515022 0 0 0 1 1 0 0 6.73429 0 -1 -2.433593E-08 9.138511 0 2.433593E-08 -1 -0.5760922 0 0 0 1 1 0 0 6.94811 0 -1 -2.433593E-08 9.138511 0 2.433593E-08 -1 -0.5760922 0 0 0 1 1 0 0 5.87047 0 -1 -2.433593E-08 8.9391 0 2.433593E-08 -1 -0.1437962 0 0 0 1 1.216796E-08 -1 -2.433593E-08 8.712311 -1.216796E-08 -2.433593E-08 1 0.1232681 -1 -1.216796E-08 -1.216796E-08 -6.74425 0 0 0 1 1 0 0 6.11768 0 -1 -2.433593E-08 8.756141 0 2.433593E-08 -1 0.1990578 0 0 0 1 1 0 0 6.57579 0 -1 -2.433593E-08 8.756141 0 2.433593E-08 -1 0.1990578 0 0 0 1 -0.9902681 -0.1391731 -3.386907E-09 -5.579009 -1.693454E-09 3.638548E-08 -1 -0.2037963 0.1391731 -0.9902681 -3.626706E-08 9.669653 0 0 0 1 -0.9902681 -0.1391731 -3.386907E-09 -5.839053 -0.1391731 0.9902681 2.409909E-08 -9.669611 -2.488281E-17 2.433593E-08 -1 -0.2039832 0 0 0 1 1 0 0 1.73605 0 -1 -2.433593E-08 8.93936 0 2.433593E-08 -1 -0.08310722 0 0 0 1 -0.8191521 0.5735765 0 -3.989025 0.5735765 0.8191521 2.433593E-08 -6.930249 1.395852E-08 1.993483E-08 -1 -1.256059 0 0 0 1 -0.8191521 0.5735765 0 -4.140749 0.5735765 0.8191521 2.433593E-08 -7.727756 1.395852E-08 1.993483E-08 -1 -1.215 0 0 0 1 -0.8545266 0.4998952 -0.1410285 -3.808599 -0.5069088 -0.8618403 0.01657307 5.687961 -0.1132593 0.08565073 0.9898668 0.5154603 0 0 0 1 -0.8545266 0.4998952 -0.1410285 -3.808642 -0.5069088 -0.8618403 0.01657307 5.688168 -0.1132593 0.08565073 0.9898668 0.5155253 0 0 0 1 -0.4926726 -0.8702052 -0.004093019 9.134174 -0.8701078 0.4925328 0.01799659 -3.3468 -0.01364478 0.01242779 -0.9998296 -1.314462 0 0 0 1 -0.4926726 -0.8702052 -0.004093019 8.856895 -0.8701078 0.4925328 0.01799659 -3.361728 -0.01364478 0.01242779 -0.9998296 -1.32262 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon33_MatArr" count="83" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon33_Weights">
+					<float_array id="polygon33_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon33_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon33_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon33_Matrices" />
+				</joints>
+				<vertex_weights count="14">
+					<input semantic="JOINT" offset="0" source="#polygon33_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon33_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>77 0 77 0 77 0 77 0 77 0 77 0 77 0 77 0 77 0 77 0 77 0 77 0 77 0 77 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNode" name="RootNode">
+			<node id="TopN" name="TopN" sid="TopN" type="JOINT">
+				<node id="EyeYellowM" name="EyeYellowM" sid="EyeYellowM" type="JOINT" />
+				<node id="TransN" name="TransN" sid="TransN" type="JOINT">
+					<node id="XRotN" name="XRotN" sid="XRotN" type="JOINT">
+						<translate>0 5.265 0</translate>
+						<node id="YRotN" name="YRotN" sid="YRotN" type="JOINT">
+							<node id="HipN" name="HipN" sid="HipN" type="JOINT">
+								<node id="LLegJ" name="LLegJ" sid="LLegJ" type="JOINT">
+									<translate>1.053 -0.715 0</translate>
+									<node id="LKneeJ" name="LKneeJ" sid="LKneeJ" type="JOINT">
+										<translate>0 -2.502501 0.029263</translate>
+										<node id="LFootJ" name="LFootJ" sid="LFootJ" type="JOINT">
+											<translate>0 -1.66725 -0.087762</translate>
+											<node id="LToeN" name="LToeN" sid="LToeN" type="JOINT">
+												<translate>0 -0.175504 0.643498</translate>
+											</node>
+										</node>
+									</node>
+								</node>
+								<node id="RLegJ" name="RLegJ" sid="RLegJ" type="JOINT">
+									<translate>-1.053 -0.715 0</translate>
+									<rotate>1 0 0 -180</rotate>
+									<node id="RKneeJ" name="RKneeJ" sid="RKneeJ" type="JOINT">
+										<translate>0 2.502501 -0.029256</translate>
+										<node id="RFootJ" name="RFootJ" sid="RFootJ" type="JOINT">
+											<translate>0 1.66725 0.087756</translate>
+											<node id="RToeN" name="RToeN" sid="RToeN" type="JOINT">
+												<translate>1E-06 0.175502 -0.6435</translate>
+											</node>
+										</node>
+									</node>
+								</node>
+								<node id="WaistN" name="WaistN" sid="WaistN" type="JOINT">
+									<translate>0 0.705285 0</translate>
+									<node id="BustN" name="BustN" sid="BustN" type="JOINT">
+										<translate>0 1.270572 0</translate>
+										<node id="LShoulderN" name="LShoulderN" sid="LShoulderN" type="JOINT">
+											<translate>0.3477 1.693494 0</translate>
+											<node id="LShoulderJ" name="LShoulderJ" sid="LShoulderJ" type="JOINT">
+												<translate>1.388346 0.005007 -0.083107</translate>
+												<node id="LArmJ" name="LArmJ" sid="LArmJ" type="JOINT">
+													<translate>1.99057 -0.000362 -0.084704</translate>
+													<node id="LASabN" name="LASabN" sid="LASabN" type="JOINT" />
+													<node id="LHandN" name="LHandN" sid="LHandN" type="JOINT">
+														<translate>2.143857 0.000104 0.024015</translate>
+														<node id="KenC" name="KenC" sid="KenC" type="JOINT">
+															<translate>0.754 -0.059 -0.01</translate>
+															<rotate>0 0 1 -48.08984</rotate>
+															<rotate>0 1 0 -89.0347</rotate>
+															<rotate>1 0 0 137.3369</rotate>
+															<node id="KenJ" name="KenJ" sid="KenJ" type="JOINT">
+																<translate>0 0 -5E-06</translate>
+																<rotate>0 0 1 0.000106</rotate>
+																<rotate>0 1 0 5.4E-05</rotate>
+																<rotate>1 0 0 89.99999</rotate>
+																<node id="KenE" name="KenE" sid="KenE" type="JOINT">
+																	<translate>8.257087 0 0</translate>
+																</node>
+																<node id="KenM" name="KenM" sid="KenM" type="JOINT">
+																	<translate>0.277271 0.008164 -0.015057</translate>
+																	<rotate>0 1 0 0.004698254</rotate>
+																</node>
+																<node id="KenModelN" name="KenModelN" sid="KenModelN" type="JOINT">
+																	<translate>1.361798 -0.001061 0.008764</translate>
+																	<rotate>0 0 1 0.507759</rotate>
+																	<rotate>0 1 0 0.000623</rotate>
+																	<rotate>1 0 0 0.00189</rotate>
+																	<node id="KenEdgeM" name="KenEdgeM" sid="KenEdgeM" type="JOINT">
+																		<translate>-1.361716 0.025624 -0.04469</translate>
+																	</node>
+																</node>
+															</node>
+														</node>
+														<node id="L1stNa" name="L1stNa" sid="L1stNa" type="JOINT">
+															<translate>0.862881 0.186801 0.32772</translate>
+															<node id="L1stNb" name="L1stNb" sid="L1stNb" type="JOINT">
+																<translate>0.292309 0 0</translate>
+															</node>
+														</node>
+														<node id="L2ndNa" name="L2ndNa" sid="L2ndNa" type="JOINT">
+															<translate>0.902071 0.210461 0.065086</translate>
+															<node id="L2ndNb" name="L2ndNb" sid="L2ndNb" type="JOINT">
+																<translate>0.313693 0 0</translate>
+															</node>
+														</node>
+														<node id="L3rdNa" name="L3rdNa" sid="L3rdNa" type="JOINT">
+															<translate>0.901087 0.253908 -0.207707</translate>
+															<node id="L3rdNb" name="L3rdNb" sid="L3rdNb" type="JOINT">
+																<translate>0.298696 0 0</translate>
+															</node>
+														</node>
+														<node id="L4thNa" name="L4thNa" sid="L4thNa" type="JOINT">
+															<translate>0.863817 0.199414 -0.432296</translate>
+															<node id="L4thNb" name="L4thNb" sid="L4thNb" type="JOINT">
+																<translate>0.213823 0 0</translate>
+															</node>
+														</node>
+														<node id="LHandNb" name="LHandNb" sid="LHandNb" type="JOINT" />
+														<node id="LHaveN" name="LHaveN" sid="LHaveN" type="JOINT">
+															<translate>0.873777 -0.226789 0.020528</translate>
+															<rotate>0 0 1 90</rotate>
+															<rotate>1 0 0 90</rotate>
+														</node>
+														<node id="LThumbNa" name="LThumbNa" sid="LThumbNa" type="JOINT">
+															<translate>0.247206 -0.18296 0.342853</translate>
+															<node id="LThumbNb" name="LThumbNb" sid="LThumbNb" type="JOINT">
+																<translate>0.458115 0 0</translate>
+															</node>
+														</node>
+													</node>
+												</node>
+												<node id="LSSabN" name="LSSabN" sid="LSSabN" type="JOINT" />
+											</node>
+										</node>
+										<node id="NeckN" name="NeckN" sid="NeckN" type="JOINT">
+											<translate>0 2.001667 -0.084403</translate>
+											<node id="HeadN" name="HeadN" sid="HeadN" type="JOINT">
+												<translate>0 0.468121 0.027247</translate>
+												<node id="HatAN" name="HatAN" sid="HatAN" type="JOINT">
+													<translate>0 2.771841 -1.620623</translate>
+													<rotate>0 0 1 -89.99416</rotate>
+													<rotate>0 1 0 89.75451</rotate>
+													<rotate>1 0 0 90</rotate>
+													<node id="HatBN" name="HatBN" sid="HatBN" type="JOINT">
+														<translate>1.872 -1.2E-05 0</translate>
+														<rotate>0 0 1 -0.000364</rotate>
+														<node id="HatCN" name="HatCN" sid="HatCN" type="JOINT">
+															<translate>2.19375 0 0</translate>
+															<rotate>1 0 0 0.006164</rotate>
+															<node id="HatDN" name="HatDN" sid="HatDN" type="JOINT">
+																<translate>2.076749 0 0</translate>
+															</node>
+														</node>
+													</node>
+												</node>
+												<node id="LHairN" name="LHairN" sid="LHairN" type="JOINT">
+													<translate>0.625903 2.948427 2.524236</translate>
+													<rotate>0 0 1 -133.5058</rotate>
+													<rotate>0 1 0 -11.95869</rotate>
+													<rotate>1 0 0 90</rotate>
+													<node id="LHairNb" name="LHairNb" sid="LHairNb" type="JOINT">
+														<translate>0.820276 0 0</translate>
+														<rotate>0 0 1 7.39564</rotate>
+														<rotate>0 1 0 -25.94137</rotate>
+														<rotate>1 0 0 -8.735689</rotate>
+														<node id="LHairNend" name="LHairNend" sid="LHairNend" type="JOINT">
+															<translate>1.090382 0 0</translate>
+														</node>
+													</node>
+												</node>
+												<node id="LSideN" name="LSideN" sid="LSideN" type="JOINT">
+													<translate>2.2815 1.552614 0.549112</translate>
+													<rotate>0 0 1 -90</rotate>
+													<rotate>0 1 0 -0.245127</rotate>
+													<rotate>1 0 0 90</rotate>
+													<node id="LSideNb" name="LSideNb" sid="LSideNb" type="JOINT">
+														<translate>1.638001 0 0</translate>
+													</node>
+												</node>
+												<node id="RHairN" name="RHairN" sid="RHairN" type="JOINT">
+													<translate>-0.911068 3.298952 1.456867</translate>
+													<rotate>0 0 1 -152.2511</rotate>
+													<rotate>0 1 0 6.357996</rotate>
+													<rotate>1 0 0 90</rotate>
+													<node id="RHairNb" name="RHairNb" sid="RHairNb" type="JOINT">
+														<translate>1.016816 0 0</translate>
+														<rotate>0 0 1 -10.82578</rotate>
+														<rotate>0 1 0 -11.52766</rotate>
+														<rotate>1 0 0 3.536329</rotate>
+														<node id="RHairNend" name="RHairNend" sid="RHairNend" type="JOINT">
+															<translate>1.498426 0 0</translate>
+														</node>
+													</node>
+												</node>
+												<node id="RSideN" name="RSideN" sid="RSideN" type="JOINT">
+													<translate>-2.2815 1.552614 0.549112</translate>
+													<rotate>0 0 1 -90</rotate>
+													<rotate>0 1 0 -0.245127</rotate>
+													<rotate>1 0 0 90</rotate>
+													<node id="RSideNb" name="RSideNb" sid="RSideNb" type="JOINT">
+														<translate>1.638001 0 0</translate>
+														<rotate>0 1 0 -3E-06</rotate>
+													</node>
+												</node>
+											</node>
+										</node>
+										<node id="RShoulderN" name="RShoulderN" sid="RShoulderN" type="JOINT">
+											<translate>-0.3477 1.693493 0</translate>
+											<rotate>1 0 0 -180</rotate>
+											<node id="RShoulderJ" name="RShoulderJ" sid="RShoulderJ" type="JOINT">
+												<translate>-1.38835 -0.00501 0.083107</translate>
+												<node id="RArmJ" name="RArmJ" sid="RArmJ" type="JOINT">
+													<translate>-1.99057 0.00036 0.084704</translate>
+													<node id="RASabN" name="RASabN" sid="RASabN" type="JOINT" />
+													<node id="RHandN" name="RHandN" sid="RHandN" type="JOINT">
+														<translate>-2.14385 -0.0001 -0.024015</translate>
+														<node id="R1stNa" name="R1stNa" sid="R1stNa" type="JOINT">
+															<translate>-0.86288 -0.1868 -0.327721</translate>
+															<node id="R1stNb" name="R1stNb" sid="R1stNb" type="JOINT">
+																<translate>-0.29231 0 0</translate>
+															</node>
+														</node>
+														<node id="R2ndNa" name="R2ndNa" sid="R2ndNa" type="JOINT">
+															<translate>-0.90207 -0.21046 -0.065086</translate>
+															<node id="R2ndNb" name="R2ndNb" sid="R2ndNb" type="JOINT">
+																<translate>-0.3137 0 0</translate>
+															</node>
+														</node>
+														<node id="R3rdNa" name="R3rdNa" sid="R3rdNa" type="JOINT">
+															<translate>-0.90109 -0.25391 0.207706</translate>
+															<node id="R3rdNb" name="R3rdNb" sid="R3rdNb" type="JOINT">
+																<translate>-0.2987 0 0</translate>
+															</node>
+														</node>
+														<node id="R4thNa" name="R4thNa" sid="R4thNa" type="JOINT">
+															<translate>-0.86382 -0.19941 0.432296</translate>
+															<node id="R4thNb" name="R4thNb" sid="R4thNb" type="JOINT">
+																<translate>-0.21382 0 0</translate>
+															</node>
+														</node>
+														<node id="RHandNb" name="RHandNb" sid="RHandNb" type="JOINT" />
+														<node id="RHaveN" name="RHaveN" sid="RHaveN" type="JOINT">
+															<translate>-0.87378 0.22679 -0.020528</translate>
+															<rotate>0 0 1 90</rotate>
+															<rotate>1 0 0 -90</rotate>
+														</node>
+														<node id="RThumbNa" name="RThumbNa" sid="RThumbNa" type="JOINT">
+															<translate>-0.24721 0.18296 -0.342854</translate>
+															<node id="RThumbNb" name="RThumbNb" sid="RThumbNb" type="JOINT">
+																<translate>-0.45811 0 0</translate>
+															</node>
+														</node>
+														<node id="TateN" name="TateN" sid="TateN" type="JOINT">
+															<translate>-1 0.14 0.06</translate>
+															<rotate>0 0 1 172</rotate>
+															<rotate>1 0 0 90</rotate>
+															<node id="TateM" name="TateM" sid="TateM" type="JOINT">
+																<translate>0.260044 0.000187 4.2E-05</translate>
+																<rotate>1 0 0 -90</rotate>
+															</node>
+														</node>
+													</node>
+												</node>
+												<node id="RSSabN" name="RSSabN" sid="RSSabN" type="JOINT" />
+											</node>
+										</node>
+										<node id="SayaN" name="SayaN" sid="SayaN" type="JOINT">
+											<translate>0.707409 0.724081 -1.256059</translate>
+											<rotate>0 0 1 145</rotate>
+											<rotate>1 0 0 180</rotate>
+											<node id="SayaM" name="SayaM" sid="SayaM" type="JOINT">
+												<translate>0.151723 0.797507 -0.041059</translate>
+											</node>
+											<node id="SayaTateN" name="SayaTateN" sid="SayaTateN" type="JOINT">
+												<translate>0.145726 -1.57072 -0.114434</translate>
+												<rotate>0 0 1 -4.672511</rotate>
+												<rotate>0 1 0 -8.107367</rotate>
+												<rotate>1 0 0 -179.0408</rotate>
+												<node id="TateMb" name="TateMb" sid="TateMb" type="JOINT">
+													<translate>4.3E-05 -0.000207 -6.5E-05</translate>
+												</node>
+											</node>
+											<node id="SayaTukaN" name="SayaTukaN" sid="SayaTukaN" type="JOINT">
+												<translate>0.238779 1.845145 -0.039438</translate>
+												<rotate>0 0 1 -95.48334</rotate>
+												<rotate>0 1 0 -0.234512</rotate>
+												<rotate>1 0 0 -1.031193</rotate>
+												<node id="KenMb" name="KenMb" sid="KenMb" type="JOINT">
+													<translate>0.277279 0.014928 0.008158</translate>
+												</node>
+											</node>
+										</node>
+									</node>
+								</node>
+							</node>
+							<node id="ThrowN" name="ThrowN" sid="ThrowN" type="JOINT">
+								<translate>0 -5.265 0</translate>
+							</node>
+						</node>
+					</node>
+				</node>
+			</node>
+			<node id="polygon33" name="polygon33" type="NODE">
+				<instance_controller url="#polygon33_Controller">
+					<skeleton>#TopN</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="Sheath" target="#Sheath">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNode" />
+	</scene>
+</COLLADA>
