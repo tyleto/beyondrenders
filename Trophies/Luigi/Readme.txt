@@ -1,1 +1,0 @@
-yo radzo! drop the fbx of Mr. L's trophy here and name it something like "Luigi_MrL"
